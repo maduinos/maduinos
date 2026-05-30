@@ -8,7 +8,6 @@ repos=(
   AutoTrading
   SlimePet
   macroKey
-  macrokey_python
   turntable
 )
 
@@ -16,4 +15,3 @@ for repo in "${repos[@]}"; do
   echo "== pushing ${repo} =="
   git -C "${workspace_root}/${repo}" push origin main
 done
-

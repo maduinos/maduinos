@@ -2,6 +2,7 @@
 
 ## 2026-05-30
 
+- Updated the public profile to treat `macroKey` as the unified Arduino and Python macro project.
 - Translated the public profile README and HTML repository overview into Korean.
 - Added an HTML repository overview for the public workspace and linked it from the profile README.
 - Added a business-first GitHub profile README for `maduinos/maduinos`.
