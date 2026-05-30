@@ -36,6 +36,7 @@ These repositories are public hobby/lab projects. They are kept separate from th
 
 ## Repository Operations
 
+- HTML overview: `docs/repository-overview.html`
 - Operations guide: `docs/repository-operations.md`
 - Changes: `CHANGELOG.md`
 - Release process: `RELEASE.md`
