@@ -94,3 +94,50 @@ git -C /home/maduinos/00_github_maduinos/macroKey push origin main
 git -C /home/maduinos/00_github_maduinos/macrokey_python push origin main
 git -C /home/maduinos/00_github_maduinos/turntable push origin main
 ```
+
+## Local Tool Installation
+
+The verification script can run without HDL/Arduino tools, but full local verification needs:
+
+- `iverilog` for C_DUINO_A7 Verilog testbenches.
+- `arduino-cli` for Arduino sketch compile checks.
+- Arduino AVR core.
+- `MsTimer2` library for `turntable`.
+
+Install on the host machine, not inside a restricted Codex sandbox:
+
+```bash
+cd /home/maduinos/00_github_maduinos/maduinos
+./scripts/install-tools.sh
+```
+
+Manual equivalent:
+
+```bash
+sudo apt-get update
+sudo apt-get install -y iverilog curl ca-certificates
+curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
+sudo install -m 0755 bin/arduino-cli /usr/local/bin/arduino-cli
+rm -rf bin
+arduino-cli core update-index
+arduino-cli core install arduino:avr
+arduino-cli lib install MsTimer2
+```
+
+After installation, run:
+
+```bash
+cd /home/maduinos/00_github_maduinos
+./maduinos/scripts/verify-all.sh
+```
+
+## Current Sandbox Limits Observed
+
+In the Codex sandbox used for this cleanup:
+
+- `apt-get install -y iverilog` failed because the session is not root.
+- `sudo` failed because `no new privileges` is set.
+- `snap install arduino-cli` failed because the snapd socket is not accessible.
+- `curl` to GitHub and Ubuntu mirrors failed because DNS could not resolve external hosts.
+
+These are environment blockers, not repository problems.
