@@ -34,3 +34,10 @@ These repositories are public hobby/lab projects. They are kept separate from th
 - Business: <https://biz.maduinos.com/>
 - Blog: <https://maduinos.blogspot.com/>
 
+## Repository Operations
+
+- Operations guide: `docs/repository-operations.md`
+- Changes: `CHANGELOG.md`
+- Support scope: `SUPPORT.md`
+- Contribution guide: `CONTRIBUTING.md`
+- Security reporting: `SECURITY.md`
