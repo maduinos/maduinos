@@ -42,3 +42,4 @@ These repositories are public hobby/lab projects. They are kept separate from th
 - Support scope: `SUPPORT.md`
 - Contribution guide: `CONTRIBUTING.md`
 - Security reporting: `SECURITY.md`
+- Local tool installer: `scripts/install-tools.sh`
