@@ -59,22 +59,23 @@ Each repository has `.github/PULL_REQUEST_TEMPLATE.md` so changes are reviewed a
 
 Any repository that ever tracked a secret-like file must document the history and rotation/rewrite response. `AutoTrading/docs/security-history.md` records the known `ext_key` history and the rule for rotating real credentials.
 
-## Current External Blockers
+## Current External Status
 
-- `maduinos/maduinos` profile repository must exist before this local repository can be pushed.
-- Local `gh` authentication tokens were invalid during setup. Re-authenticate before creating the profile repository or pushing through `gh`.
-- Shell network access failed with DNS errors during `git push`. Retry after network/DNS access is restored.
+- Public GitHub repositories now exist for the standard workspace set, including `maduinos/AutoTrading` and `maduinos/maduinos`.
+- Direct `git push` over each configured `origin` works when external network access is available.
+- `gh auth status` may still report stale local token entries. Direct Git operations are the source of truth for normal pushes unless a `gh`-specific workflow is required.
+- The sandbox-visible `arduino-cli` is a snap shim that cannot create its runtime directories here. `verify-all.sh` detects that condition and skips Arduino compile checks with a clear message.
 
 ## Profile Repository Setup
 
-After `gh auth login -h github.com` succeeds:
+The profile repository has already been created and pushed. If it ever needs to be recreated from a fresh machine, use:
 
 ```bash
 cd /home/maduinos/00_github_maduinos/maduinos
 gh repo create maduinos/maduinos --public --description "Maduinos GitHub profile" --source=. --remote=origin --push
 ```
 
-If the GitHub repository already exists:
+If the GitHub repository already exists and only the remote is missing locally:
 
 ```bash
 cd /home/maduinos/00_github_maduinos/maduinos
@@ -93,6 +94,7 @@ git -C /home/maduinos/00_github_maduinos/SlimePet push origin main
 git -C /home/maduinos/00_github_maduinos/macroKey push origin main
 git -C /home/maduinos/00_github_maduinos/macrokey_python push origin main
 git -C /home/maduinos/00_github_maduinos/turntable push origin main
+git -C /home/maduinos/00_github_maduinos/maduinos push origin main
 ```
 
 ## Local Tool Installation
@@ -136,8 +138,9 @@ cd /home/maduinos/00_github_maduinos
 In the Codex sandbox used for this cleanup:
 
 - `apt-get install -y iverilog` failed because the session is not root.
-- `sudo` failed because `no new privileges` is set.
+- `sudo` inside the sandbox failed because `no new privileges` is set; outside the sandbox it still requires an interactive password.
 - `snap install arduino-cli` failed because the snapd socket is not accessible.
-- `curl` to GitHub and Ubuntu mirrors failed because DNS could not resolve external hosts.
+- unapproved shell network access failed with DNS errors; approved external network execution reached GitHub successfully.
+- `/snap/bin/arduino-cli` exists but is not runnable in this environment because snap cannot create its user data and runtime directories.
 
 These are environment blockers, not repository problems.
