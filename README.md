@@ -38,6 +38,7 @@ These repositories are public hobby/lab projects. They are kept separate from th
 
 - Operations guide: `docs/repository-operations.md`
 - Changes: `CHANGELOG.md`
+- Release process: `RELEASE.md`
 - Support scope: `SUPPORT.md`
 - Contribution guide: `CONTRIBUTING.md`
 - Security reporting: `SECURITY.md`
