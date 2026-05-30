@@ -28,6 +28,8 @@ The top-level `.git` path may appear in the Codex environment as a read-only `tm
 ## Release Checklist
 
 - README has purpose, status, requirements, usage, tests, and license.
+- `CHANGELOG.md` records public-facing changes.
+- `SUPPORT.md` explains what belongs in public issues and what should go to private business contact.
 - `.gitignore` excludes generated files, local secrets, logs, and build output.
 - `.editorconfig` defines line endings, final newline behavior, and indentation.
 - `CONTRIBUTING.md` defines acceptable contribution scope and local checks.
