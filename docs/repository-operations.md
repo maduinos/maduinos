@@ -30,6 +30,7 @@ The top-level `.git` path may appear in the Codex environment as a read-only `tm
 - README has purpose, status, requirements, usage, tests, and license.
 - `CHANGELOG.md` records public-facing changes.
 - `SUPPORT.md` explains what belongs in public issues and what should go to private business contact.
+- `RELEASE.md` explains release and tag expectations.
 - `.gitignore` excludes generated files, local secrets, logs, and build output.
 - `.editorconfig` defines line endings, final newline behavior, and indentation.
 - `CONTRIBUTING.md` defines acceptable contribution scope and local checks.
@@ -49,6 +50,14 @@ The top-level `.git` path may appear in the Codex environment as a read-only `tm
 - Private consulting or customer-specific requests redirected to the business site.
 
 Personal lab repositories may keep issues simpler, but they still need security and ownership metadata.
+
+## Pull Request Baseline
+
+Each repository has `.github/PULL_REQUEST_TEMPLATE.md` so changes are reviewed against the local verification commands and repository-specific safety checks.
+
+## Secret History Baseline
+
+Any repository that ever tracked a secret-like file must document the history and rotation/rewrite response. `AutoTrading/docs/security-history.md` records the known `ext_key` history and the rule for rotating real credentials.
 
 ## Current External Blockers
 
