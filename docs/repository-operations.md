@@ -8,6 +8,12 @@ Use GitHub as a business-first public code portfolio.
 - Keep personal lab repositories public but clearly labeled as hobby/lab work.
 - Avoid presenting trading, desktop toy, and macro helper repositories as business code.
 
+## Workspace Layout
+
+`/home/maduinos/00_github_maduinos` is a workspace that contains several independent Git repositories. It is not managed as one parent Git repository.
+
+The top-level `.git` path may appear in the Codex environment as a read-only `tmpfs` mount. Treat it as environment metadata, not as a project repository. Run Git commands inside the child repositories listed below.
+
 ## Repository Classes
 
 | Repository | Class | Operating Rule |
@@ -63,4 +69,3 @@ git -C /home/maduinos/00_github_maduinos/macroKey push origin main
 git -C /home/maduinos/00_github_maduinos/macrokey_python push origin main
 git -C /home/maduinos/00_github_maduinos/turntable push origin main
 ```
-
