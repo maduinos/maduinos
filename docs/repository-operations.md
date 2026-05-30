@@ -1,81 +1,62 @@
-# Maduinos Public Repository Operations
+# Maduinos 공개 저장소 운영 문서
 
-## Positioning
+## 기본 방향
 
-Use GitHub as a business-first public code portfolio.
+GitHub 공개 프로필은 FPGA와 C_DUINO_A7 보드 자료가 먼저 보이도록 운영합니다.
 
-- Lead with FPGA, C_DUINO_A7, board bring-up, and education material.
-- Keep personal lab repositories public but clearly labeled as hobby/lab work.
-- Avoid presenting trading, desktop toy, and macro helper repositories as business code.
+- FPGA, C_DUINO_A7, 보드 bring-up, 교육 자료를 핵심 공개 자료로 둡니다.
+- 개인 실험 저장소는 공개하되 취미/실험 프로젝트로 명확히 표시합니다.
+- 자동매매, 데스크톱 장난감 앱, 매크로 도구는 비즈니스 코드처럼 보이지 않게 구분합니다.
 
-## Workspace Layout
+## 작업 폴더 구조
 
-`/home/maduinos/00_github_maduinos` is a workspace that contains several independent Git repositories. It is not managed as one parent Git repository.
+`/home/maduinos/00_github_maduinos` 폴더에는 여러 개의 독립 Git 저장소가 들어 있습니다. 상위 폴더 하나를 한 번에 커밋하는 구조가 아니므로, 변경 사항은 각 하위 저장소 안에서 따로 확인하고 커밋합니다.
 
-The top-level `.git` path may appear in the Codex environment as a read-only `tmpfs` mount. Treat it as environment metadata, not as a project repository. Run Git commands inside the child repositories listed below.
+## 저장소 구분
 
-## Repository Classes
-
-| Repository | Class | Operating Rule |
+| 저장소 | 구분 | 운영 기준 |
 | --- | --- | --- |
-| `c_duino_a7` | Business-facing FPGA reference | Prioritize docs, reproducible simulation, release hygiene, and customer-readable explanations |
-| `AutoTrading` | Personal lab | Keep safe to inspect, avoid real keys, avoid accidental live trading examples |
-| `SlimePet` | Personal lab | Keep runnable docs and small tests |
-| `macroKey` | Personal lab | Keep build instructions and safety notes |
-| `macrokey_python` | Personal lab | Keep import-safe and testable, no tracked logs |
-| `turntable` | Personal lab | Keep build instructions and hardware safety notes |
+| `c_duino_a7` | 비즈니스 공개 FPGA 자료 | 보드 설명, 예제 구조, bring-up 문서를 우선 관리 |
+| `AutoTrading` | 개인 실험 | 실제 키를 넣지 않고 실거래 추천 코드처럼 보이지 않게 관리 |
+| `SlimePet` | 개인 실험 | 실행 방법과 버전 기록을 간단히 유지 |
+| `macroKey` | 개인 실험 | Arduino HID 동작과 안전 주의사항을 명확히 기록 |
+| `macrokey_python` | 개인 실험 | import-safe 구조와 런타임 로그 미추적 원칙 유지 |
+| `turntable` | 개인 실험 | 하드웨어 요구사항과 안전 주의사항을 명확히 기록 |
+| `maduinos` | 프로필/운영 문서 | GitHub 프로필 README와 전체 저장소 운영 기준 관리 |
 
-## Release Checklist
+## 공개 전 확인 기준
 
-- README has purpose, status, requirements, usage, tests, and license.
-- `CHANGELOG.md` records public-facing changes.
-- `SUPPORT.md` explains what belongs in public issues and what should go to private business contact.
-- `RELEASE.md` explains release and tag expectations.
-- `.gitignore` excludes generated files, local secrets, logs, and build output.
-- `.editorconfig` defines line endings, final newline behavior, and indentation.
-- `CONTRIBUTING.md` defines acceptable contribution scope and local checks.
-- `SECURITY.md` defines private reporting for secrets, private data, or unsafe hardware behavior.
-- `.github/CODEOWNERS` assigns ownership to `@maduinos`.
-- Public-risk files such as API keys and local paths are not tracked.
-- CI exists for repositories with testable code.
-- Version history is updated when a repository has explicit version bookkeeping.
-- GitHub profile README points to `c_duino_a7` as the featured repository.
+- README에 목적, 요구사항, 사용법, 라이선스가 정리되어 있는지 확인합니다.
+- `CHANGELOG.md`에는 공개적으로 의미 있는 변경 사항만 남깁니다.
+- `SUPPORT.md`에는 공개 이슈로 다룰 내용과 비공개 연락이 필요한 내용을 구분합니다.
+- `RELEASE.md`에는 릴리스와 태그 기준을 적습니다.
+- `CONTRIBUTING.md`에는 허용되는 변경 범위와 로컬 확인 절차를 적습니다.
+- `SECURITY.md`에는 비밀키, 개인 데이터, 안전 문제가 생겼을 때의 비공개 신고 경로를 둡니다.
+- 공개 위험이 있는 API 키, 로컬 경로, 개인 로그는 추적하지 않습니다.
+- 버전 기록이 있는 저장소는 코드와 문서의 버전 표기를 맞춥니다.
+- GitHub 프로필 README는 `c_duino_a7`을 대표 저장소로 보여줍니다.
 
-## Business-Facing Issue Handling
+## 보안 이력
 
-`c_duino_a7` is the business-facing public FPGA reference. It has issue templates for:
+과거에 비밀키처럼 보이는 파일이 추적된 저장소는 이력과 대응 방식을 문서화합니다. `AutoTrading/docs/security-history.md`는 `ext_key` 파일 이력과 실제 자격 증명이 노출됐을 때의 회전 원칙을 기록합니다.
 
-- HDL/testbench bug reports.
-- Documentation requests.
-- Private consulting or customer-specific requests redirected to the business site.
+## 현재 외부 상태
 
-Personal lab repositories may keep issues simpler, but they still need security and ownership metadata.
+- 표준 작업 폴더의 공개 GitHub 저장소가 생성되어 있습니다.
+- 각 저장소는 `origin/main`으로 직접 푸시합니다.
+- GitHub CLI 인증 상태가 흔들릴 수 있으므로 일반 푸시는 Git 원격 상태를 기준으로 확인합니다.
+- Arduino 관련 빌드는 로컬 host 환경의 도구 설치 상태에 따라 달라질 수 있습니다.
 
-## Pull Request Baseline
+## 프로필 저장소 설정
 
-Each repository has `.github/PULL_REQUEST_TEMPLATE.md` so changes are reviewed against the local verification commands and repository-specific safety checks.
-
-## Secret History Baseline
-
-Any repository that ever tracked a secret-like file must document the history and rotation/rewrite response. `AutoTrading/docs/security-history.md` records the known `ext_key` history and the rule for rotating real credentials.
-
-## Current External Status
-
-- Public GitHub repositories now exist for the standard workspace set, including `maduinos/AutoTrading` and `maduinos/maduinos`.
-- Direct `git push` over each configured `origin` works when external network access is available.
-- `gh auth status` may still report stale local token entries. Direct Git operations are the source of truth for normal pushes unless a `gh`-specific workflow is required.
-- The sandbox-visible `arduino-cli` is a snap shim that cannot create its runtime directories here. `verify-all.sh` detects that condition and skips Arduino compile checks with a clear message.
-
-## Profile Repository Setup
-
-The profile repository has already been created and pushed. If it ever needs to be recreated from a fresh machine, use:
+프로필 저장소는 이미 생성되어 푸시되어 있습니다. 새 환경에서 다시 구성해야 할 때는 다음 명령을 사용합니다.
 
 ```bash
 cd /home/maduinos/00_github_maduinos/maduinos
 gh repo create maduinos/maduinos --public --description "Maduinos GitHub profile" --source=. --remote=origin --push
 ```
 
-If the GitHub repository already exists and only the remote is missing locally:
+GitHub 저장소가 이미 있고 로컬 원격만 빠진 경우:
 
 ```bash
 cd /home/maduinos/00_github_maduinos/maduinos
@@ -83,9 +64,9 @@ git remote add origin https://github.com/maduinos/maduinos.git
 git push -u origin main
 ```
 
-## Push Order
+## 푸시 순서
 
-Push the business-facing repository first, then personal lab repositories:
+비즈니스 공개 자료를 먼저 푸시한 뒤 개인 실험 저장소를 푸시합니다.
 
 ```bash
 git -C /home/maduinos/00_github_maduinos/c_duino_a7 push origin main
@@ -97,23 +78,23 @@ git -C /home/maduinos/00_github_maduinos/turntable push origin main
 git -C /home/maduinos/00_github_maduinos/maduinos push origin main
 ```
 
-## Local Tool Installation
+## 로컬 도구
 
-The verification script can run without HDL/Arduino tools, but full local verification needs:
+하드웨어/임베디드 저장소를 점검하려면 host 환경에 필요한 도구를 설치합니다.
 
-- `iverilog` for C_DUINO_A7 Verilog testbenches.
-- `arduino-cli` for Arduino sketch compile checks.
-- Arduino AVR core.
-- `MsTimer2` library for `turntable`.
+- `iverilog`: Verilog 소스 문법 확인
+- `arduino-cli`: Arduino 스케치 컴파일
+- Arduino AVR core
+- `MsTimer2`: `turntable` 빌드에 필요한 Arduino 라이브러리
 
-Install on the host machine, not inside a restricted Codex sandbox:
+설치 예:
 
 ```bash
 cd /home/maduinos/00_github_maduinos/maduinos
 ./scripts/install-tools.sh
 ```
 
-Manual equivalent:
+수동 설치 예:
 
 ```bash
 sudo apt-get update
@@ -126,21 +107,12 @@ arduino-cli core install arduino:avr
 arduino-cli lib install MsTimer2
 ```
 
-After installation, run:
+## 현재 작업 환경에서 확인된 제한
 
-```bash
-cd /home/maduinos/00_github_maduinos
-./maduinos/scripts/verify-all.sh
-```
+Codex sandbox에서는 host 시스템 도구 설치와 일부 네트워크 작업이 제한될 수 있습니다.
 
-## Current Sandbox Limits Observed
+- root 권한이 필요한 패키지 설치는 실패할 수 있습니다.
+- snap 기반 `arduino-cli`는 sandbox에서 런타임 폴더를 만들지 못할 수 있습니다.
+- 외부 네트워크가 필요한 GitHub 작업은 승인된 실행 환경에서 처리해야 합니다.
 
-In the Codex sandbox used for this cleanup:
-
-- `apt-get install -y iverilog` failed because the session is not root.
-- `sudo` inside the sandbox failed because `no new privileges` is set; outside the sandbox it still requires an interactive password.
-- `snap install arduino-cli` failed because the snapd socket is not accessible.
-- unapproved shell network access failed with DNS errors; approved external network execution reached GitHub successfully.
-- `/snap/bin/arduino-cli` exists but is not runnable in this environment because snap cannot create its user data and runtime directories.
-
-These are environment blockers, not repository problems.
+이 제한은 저장소 내용 문제가 아니라 실행 환경의 제약입니다.
