@@ -29,10 +29,24 @@ The top-level `.git` path may appear in the Codex environment as a read-only `tm
 
 - README has purpose, status, requirements, usage, tests, and license.
 - `.gitignore` excludes generated files, local secrets, logs, and build output.
+- `.editorconfig` defines line endings, final newline behavior, and indentation.
+- `CONTRIBUTING.md` defines acceptable contribution scope and local checks.
+- `SECURITY.md` defines private reporting for secrets, private data, or unsafe hardware behavior.
+- `.github/CODEOWNERS` assigns ownership to `@maduinos`.
 - Public-risk files such as API keys and local paths are not tracked.
 - CI exists for repositories with testable code.
 - Version history is updated when a repository has explicit version bookkeeping.
 - GitHub profile README points to `c_duino_a7` as the featured repository.
+
+## Business-Facing Issue Handling
+
+`c_duino_a7` is the business-facing public FPGA reference. It has issue templates for:
+
+- HDL/testbench bug reports.
+- Documentation requests.
+- Private consulting or customer-specific requests redirected to the business site.
+
+Personal lab repositories may keep issues simpler, but they still need security and ownership metadata.
 
 ## Current External Blockers
 
