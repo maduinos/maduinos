@@ -2,6 +2,7 @@
 
 ## 2026-05-30
 
+- Translated the public profile README and HTML repository overview into Korean.
 - Added an HTML repository overview for the public workspace and linked it from the profile README.
 - Added an `arduino-cli` runtime check so local verification skips unusable snap shims cleanly.
 - Added a business-first GitHub profile README for `maduinos/maduinos`.

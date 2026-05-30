@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Maduinos Repository Overview</title>
+  <title>Maduinos 저장소 소개</title>
   <style>
     :root {
       color-scheme: light;
@@ -261,12 +261,12 @@
 <body>
   <header>
     <div class="hero">
-      <div class="hero-media" role="img" aria-label="C_DUINO_A7 board reference image">
-        <p class="eyebrow">Public code portfolio</p>
-        <h1>Maduinos Repository Overview</h1>
+      <div class="hero-media" role="img" aria-label="C_DUINO_A7 보드 참고 이미지">
+        <p class="eyebrow">공개 코드 포트폴리오</p>
+        <h1>Maduinos 저장소 소개</h1>
         <p>
-          A business-first map of the Maduinos public repositories, centered on FPGA education,
-          C_DUINO_A7 board bring-up, embedded examples, and clearly separated personal lab work.
+          Maduinos 공개 저장소를 FPGA 교육, C_DUINO_A7 보드 bring-up, 임베디드 예제,
+          개인 실험 프로젝트로 나누어 정리한 안내 문서입니다.
         </p>
       </div>
     </div>
@@ -274,182 +274,177 @@
 
   <main>
     <section id="portfolio-map">
-      <h2>Portfolio Map</h2>
+      <h2>저장소 구성</h2>
       <p>
-        The workspace at <code>/home/maduinos/00_github_maduinos</code> contains several independent
-        Git repositories. It is not one parent repository. Each child directory is committed and
-        pushed on its own, with the <code>maduinos</code> directory reserved for the GitHub profile
-        README and repository operations material.
+        <code>/home/maduinos/00_github_maduinos</code> 작업 폴더는 여러 개의 독립 Git 저장소를
+        담고 있습니다. 상위 폴더 하나가 전체 Git 저장소인 구조가 아니며, 각 하위 디렉터리에서
+        개별적으로 커밋하고 푸시합니다. <code>maduinos</code> 디렉터리는 GitHub 프로필 README와
+        저장소 운영 문서를 관리하는 용도입니다.
       </p>
 
-      <div class="summary-grid" aria-label="Repository summary">
+      <div class="summary-grid" aria-label="저장소 요약">
         <div class="summary-item">
           <strong>1</strong>
-          Business-facing FPGA reference repository.
+          FPGA 교육과 보드 bring-up을 대표하는 비즈니스용 저장소입니다.
         </div>
         <div class="summary-item">
           <strong>5</strong>
-          Personal lab repositories kept public but scoped away from business positioning.
+          공개 상태로 유지하는 개인 실험 저장소입니다.
         </div>
         <div class="summary-item">
           <strong>1</strong>
-          Profile and operations repository for account-level documentation.
+          GitHub 프로필과 전체 운영 문서를 관리하는 저장소입니다.
         </div>
       </div>
     </section>
 
     <section id="repositories">
-      <h2>Repositories</h2>
+      <h2>저장소 목록</h2>
       <p>
-        The public profile should lead with FPGA and board-level material. Lab projects remain useful
-        examples, but they are described as experiments instead of customer-facing deliverables.
+        공개 프로필에서는 FPGA와 보드 레벨 자료를 먼저 보여줍니다. 개인 실험 프로젝트도 참고용으로
+        공개하지만, 고객 대상 산출물과는 분리해서 설명합니다.
       </p>
 
       <div class="repo-grid">
         <article class="repo-card business">
           <h3><a href="https://github.com/maduinos/c_duino_a7">c_duino_a7</a></h3>
           <p>
-            Public FPGA demo sources and documentation for the C_DUINO_A7 board. This is the primary
-            business-facing repository for HDL examples, simulation notes, board bring-up, and
-            customer-readable training material.
+            C_DUINO_A7 보드를 위한 공개 FPGA 데모 소스와 문서입니다. HDL 예제, 시뮬레이션 기록,
+            보드 bring-up, 학습자가 읽을 수 있는 교육 자료를 모아둔 대표 저장소입니다.
           </p>
           <div class="tag-row">
             <span class="tag">FPGA</span>
             <span class="tag">Verilog</span>
-            <span class="tag">Board bring-up</span>
+            <span class="tag">보드 bring-up</span>
           </div>
         </article>
 
         <article class="repo-card risk">
           <h3><a href="https://github.com/maduinos/AutoTrading">AutoTrading</a></h3>
           <p>
-            Personal cryptocurrency automation lab. It is kept inspectable with tests and secret
-            handling notes, but it should not be presented as business portfolio code or as a live
-            trading recommendation.
+            암호화폐 자동화 개인 실험 저장소입니다. 테스트와 비밀키 관리 문서를 포함하지만,
+            비즈니스 포트폴리오나 실거래 추천 코드로 제시하지 않습니다.
           </p>
           <div class="tag-row">
             <span class="tag">Python</span>
-            <span class="tag">Personal lab</span>
-            <span class="tag">Secret hygiene</span>
+            <span class="tag">개인 실험</span>
+            <span class="tag">비밀키 관리</span>
           </div>
         </article>
 
         <article class="repo-card lab">
           <h3><a href="https://github.com/maduinos/SlimePet">SlimePet</a></h3>
           <p>
-            Desktop toy application experiment. The repository is maintained with runnable docs,
-            lightweight tests, version notes, and a clear distinction from the FPGA business focus.
+            데스크톱 장난감 앱 실험입니다. 실행 문서, 가벼운 테스트, 버전 기록을 유지하며
+            FPGA 비즈니스 중심 자료와 구분합니다.
           </p>
           <div class="tag-row">
             <span class="tag">Python</span>
-            <span class="tag">Desktop app</span>
-            <span class="tag">Personal lab</span>
+            <span class="tag">데스크톱 앱</span>
+            <span class="tag">개인 실험</span>
           </div>
         </article>
 
         <article class="repo-card lab">
           <h3><a href="https://github.com/maduinos/macroKey">macroKey</a></h3>
           <p>
-            Arduino HID macro keypad sketch. This is a hardware utility experiment with build notes,
-            safety expectations, and a narrow usage scope.
+            Arduino HID 매크로 키패드 스케치입니다. 빌드 방법, 안전 주의사항, 제한된 사용 범위를
+            함께 정리한 하드웨어 유틸리티 실험입니다.
           </p>
           <div class="tag-row">
             <span class="tag">Arduino</span>
             <span class="tag">HID</span>
-            <span class="tag">Macro keypad</span>
+            <span class="tag">매크로 키패드</span>
           </div>
         </article>
 
         <article class="repo-card lab">
           <h3><a href="https://github.com/maduinos/macrokey_python">macrokey_python</a></h3>
           <p>
-            Python helper for image macro paste workflows. It is kept import-safe and testable, with
-            macro dispatch constrained through an explicit registry.
+            이미지 매크로 붙여넣기 작업을 돕는 Python 도구입니다. import-safe 구조와 테스트를
+            유지하고, 매크로 실행은 명시적인 registry로 제한합니다.
           </p>
           <div class="tag-row">
             <span class="tag">Python</span>
-            <span class="tag">Automation helper</span>
-            <span class="tag">Tests</span>
+            <span class="tag">자동화 도구</span>
+            <span class="tag">테스트</span>
           </div>
         </article>
 
         <article class="repo-card lab">
           <h3><a href="https://github.com/maduinos/turntable">turntable</a></h3>
           <p>
-            Arduino stepper turntable experiment. The repository documents hardware requirements,
-            build expectations, and safety notes for small embedded prototypes.
+            Arduino 스테퍼 모터 턴테이블 실험입니다. 작은 임베디드 프로토타입에 필요한 하드웨어
+            요구사항, 빌드 조건, 안전 주의사항을 문서화합니다.
           </p>
           <div class="tag-row">
             <span class="tag">Arduino</span>
-            <span class="tag">Stepper</span>
-            <span class="tag">Prototype</span>
+            <span class="tag">스테퍼 모터</span>
+            <span class="tag">프로토타입</span>
           </div>
         </article>
 
         <article class="repo-card profile">
           <h3><a href="https://github.com/maduinos/maduinos">maduinos</a></h3>
           <p>
-            GitHub profile and operations repository. It contains the account README, release and
-            support documents, public repository governance notes, and scripts for checking or
-            pushing the local workspace.
+            GitHub 프로필과 운영 문서를 관리하는 저장소입니다. 계정 README, 릴리스/지원 문서,
+            공개 저장소 운영 기준, 로컬 검증 및 푸시 스크립트를 포함합니다.
           </p>
           <div class="tag-row">
             <span class="tag">Profile README</span>
-            <span class="tag">Operations</span>
-            <span class="tag">Documentation</span>
+            <span class="tag">운영</span>
+            <span class="tag">문서</span>
           </div>
         </article>
       </div>
     </section>
 
     <section id="workflow">
-      <h2>Operating Workflow</h2>
+      <h2>운영 흐름</h2>
       <p>
-        Repository work is intentionally split into local checks, focused commits, direct pushes, and
-        public-facing docs. The profile repository is the source of truth for how the workspace should
-        be handled.
+        저장소 작업은 로컬 검증, 저장소별 커밋, 직접 푸시, 공개 문서 관리로 나누어 처리합니다.
+        이 프로필 저장소는 전체 작업 폴더를 어떻게 다룰지 기록하는 기준 문서 역할을 합니다.
       </p>
 
       <div class="workflow">
         <div>
-          <h3>1. Check locally</h3>
-          <p>Run <code>scripts/verify-all.sh</code> from the workspace to test Python projects, HDL simulations, and available Arduino checks.</p>
+          <h3>1. 로컬 검증</h3>
+          <p>작업 폴더에서 <code>scripts/verify-all.sh</code>를 실행해 Python 테스트, HDL 시뮬레이션, 사용 가능한 Arduino 검사를 수행합니다.</p>
         </div>
         <div>
-          <h3>2. Commit per repo</h3>
-          <p>Because the workspace is not a parent Git repo, commit changes inside the affected child repository.</p>
+          <h3>2. 저장소별 커밋</h3>
+          <p>상위 작업 폴더는 Git 저장소가 아니므로 변경된 하위 저장소 안에서 각각 커밋합니다.</p>
         </div>
         <div>
-          <h3>3. Push directly</h3>
-          <p>Use each repository's <code>origin/main</code>. The helper script can push the standard public project set.</p>
+          <h3>3. 직접 푸시</h3>
+          <p>각 저장소의 <code>origin/main</code>으로 푸시합니다. helper script는 표준 공개 저장소 묶음을 한 번에 처리할 수 있습니다.</p>
         </div>
         <div>
-          <h3>4. Keep scope clear</h3>
-          <p>Lead with FPGA education and hardware bring-up; label non-FPGA repositories as personal lab work.</p>
+          <h3>4. 범위 구분</h3>
+          <p>FPGA 교육과 하드웨어 bring-up을 먼저 보여주고, 비-FPGA 저장소는 개인 실험으로 표시합니다.</p>
         </div>
       </div>
     </section>
 
     <section id="documents">
-      <h2>Key Documents</h2>
+      <h2>주요 문서</h2>
       <p>
-        These documents define the public posture, contribution expectations, support boundaries, and
-        local operating commands for the Maduinos repository set.
+        아래 문서들은 공개 저장소의 방향, 기여 기준, 지원 범위, 로컬 운영 명령을 정리합니다.
       </p>
       <ul class="doc-list">
-        <li><a href="repository-operations.md">Repository operations</a>: workspace layout, blockers, push order, and local tool setup.</li>
-        <li><a href="../README.md">Profile README</a>: business-first public profile content.</li>
-        <li><a href="../CHANGELOG.md">Changelog</a>: public-facing documentation updates.</li>
-        <li><a href="../SECURITY.md">Security policy</a>: private reporting path for secrets or unsafe behavior.</li>
-        <li><a href="../CONTRIBUTING.md">Contribution guide</a>: scope and local verification expectations.</li>
-        <li><a href="../RELEASE.md">Release process</a>: version and tag expectations for public repositories.</li>
+        <li><a href="repository-operations.md">저장소 운영 문서</a>: 작업 폴더 구조, 차단 요인, 푸시 순서, 로컬 도구 설정.</li>
+        <li><a href="../README.md">프로필 README</a>: GitHub 프로필에 표시되는 공개 소개 문서.</li>
+        <li><a href="../CHANGELOG.md">변경 이력</a>: 공개 문서와 운영 기준 변경 사항.</li>
+        <li><a href="../SECURITY.md">보안 정책</a>: 비밀키나 안전 문제를 비공개로 신고하는 경로.</li>
+        <li><a href="../CONTRIBUTING.md">기여 가이드</a>: 변경 범위와 로컬 검증 기준.</li>
+        <li><a href="../RELEASE.md">릴리스 절차</a>: 공개 저장소의 버전과 태그 기준.</li>
       </ul>
     </section>
   </main>
 
   <footer>
     <div class="footer-inner">
-      Maduinos public repository overview. Business: <a href="https://biz.maduinos.com/">biz.maduinos.com</a>.
+      Maduinos 공개 저장소 소개. 비즈니스: <a href="https://biz.maduinos.com/">biz.maduinos.com</a>.
     </div>
   </footer>
 </body>
