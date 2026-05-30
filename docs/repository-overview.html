@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maduinos Repository Overview</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #202124;
+      --muted: #5f6368;
+      --line: #d8dee4;
+      --paper: #ffffff;
+      --band: #f6f8fa;
+      --blue: #1756a9;
+      --green: #18794e;
+      --red: #b42318;
+      --amber: #946200;
+      --chip: #eef4ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .hero {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 32px;
+    }
+
+    .hero-media {
+      min-height: 280px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(rgba(32, 33, 36, .64), rgba(32, 33, 36, .40)),
+        url("https://raw.githubusercontent.com/maduinos/c_duino_a7/main/c_duino_a7_scm.jpg") center / cover;
+      color: #fff;
+      display: grid;
+      align-content: end;
+      padding: 32px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #dbeafe;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 14px 0 0;
+      color: #f8fafc;
+      font-size: 17px;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 34px 0 56px;
+    }
+
+    section {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-child {
+      border-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 25px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .summary-item,
+    .repo-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 16px;
+    }
+
+    .summary-item strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .repo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .repo-card.business {
+      border-top: 4px solid var(--blue);
+    }
+
+    .repo-card.profile {
+      border-top: 4px solid var(--green);
+    }
+
+    .repo-card.lab {
+      border-top: 4px solid var(--amber);
+    }
+
+    .repo-card.risk {
+      border-top: 4px solid var(--red);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      border: 1px solid #c7d7fe;
+      border-radius: 999px;
+      background: var(--chip);
+      color: #1e3a8a;
+      padding: 3px 9px;
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .workflow div {
+      border-left: 4px solid var(--green);
+      background: var(--band);
+      padding: 14px;
+    }
+
+    .doc-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .doc-list li {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    code {
+      border-radius: 4px;
+      background: #f1f5f9;
+      padding: 2px 5px;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: .95em;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      background: var(--band);
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 22px 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 820px) {
+      .summary-grid,
+      .repo-grid,
+      .workflow,
+      .doc-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        width: min(100% - 28px, 1120px);
+        padding-top: 26px;
+      }
+
+      .hero-media {
+        min-height: 340px;
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      main,
+      .footer-inner {
+        width: min(100% - 28px, 1120px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <div class="hero-media" role="img" aria-label="C_DUINO_A7 board reference image">
+        <p class="eyebrow">Public code portfolio</p>
+        <h1>Maduinos Repository Overview</h1>
+        <p>
+          A business-first map of the Maduinos public repositories, centered on FPGA education,
+          C_DUINO_A7 board bring-up, embedded examples, and clearly separated personal lab work.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="portfolio-map">
+      <h2>Portfolio Map</h2>
+      <p>
+        The workspace at <code>/home/maduinos/00_github_maduinos</code> contains several independent
+        Git repositories. It is not one parent repository. Each child directory is committed and
+        pushed on its own, with the <code>maduinos</code> directory reserved for the GitHub profile
+        README and repository operations material.
+      </p>
+
+      <div class="summary-grid" aria-label="Repository summary">
+        <div class="summary-item">
+          <strong>1</strong>
+          Business-facing FPGA reference repository.
+        </div>
+        <div class="summary-item">
+          <strong>5</strong>
+          Personal lab repositories kept public but scoped away from business positioning.
+        </div>
+        <div class="summary-item">
+          <strong>1</strong>
+          Profile and operations repository for account-level documentation.
+        </div>
+      </div>
+    </section>
+
+    <section id="repositories">
+      <h2>Repositories</h2>
+      <p>
+        The public profile should lead with FPGA and board-level material. Lab projects remain useful
+        examples, but they are described as experiments instead of customer-facing deliverables.
+      </p>
+
+      <div class="repo-grid">
+        <article class="repo-card business">
+          <h3><a href="https://github.com/maduinos/c_duino_a7">c_duino_a7</a></h3>
+          <p>
+            Public FPGA demo sources and documentation for the C_DUINO_A7 board. This is the primary
+            business-facing repository for HDL examples, simulation notes, board bring-up, and
+            customer-readable training material.
+          </p>
+          <div class="tag-row">
+            <span class="tag">FPGA</span>
+            <span class="tag">Verilog</span>
+            <span class="tag">Board bring-up</span>
+          </div>
+        </article>
+
+        <article class="repo-card risk">
+          <h3><a href="https://github.com/maduinos/AutoTrading">AutoTrading</a></h3>
+          <p>
+            Personal cryptocurrency automation lab. It is kept inspectable with tests and secret
+            handling notes, but it should not be presented as business portfolio code or as a live
+            trading recommendation.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">Personal lab</span>
+            <span class="tag">Secret hygiene</span>
+          </div>
+        </article>
+
+        <article class="repo-card lab">
+          <h3><a href="https://github.com/maduinos/SlimePet">SlimePet</a></h3>
+          <p>
+            Desktop toy application experiment. The repository is maintained with runnable docs,
+            lightweight tests, version notes, and a clear distinction from the FPGA business focus.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">Desktop app</span>
+            <span class="tag">Personal lab</span>
+          </div>
+        </article>
+
+        <article class="repo-card lab">
+          <h3><a href="https://github.com/maduinos/macroKey">macroKey</a></h3>
+          <p>
+            Arduino HID macro keypad sketch. This is a hardware utility experiment with build notes,
+            safety expectations, and a narrow usage scope.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Arduino</span>
+            <span class="tag">HID</span>
+            <span class="tag">Macro keypad</span>
+          </div>
+        </article>
+
+        <article class="repo-card lab">
+          <h3><a href="https://github.com/maduinos/macrokey_python">macrokey_python</a></h3>
+          <p>
+            Python helper for image macro paste workflows. It is kept import-safe and testable, with
+            macro dispatch constrained through an explicit registry.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">Automation helper</span>
+            <span class="tag">Tests</span>
+          </div>
+        </article>
+
+        <article class="repo-card lab">
+          <h3><a href="https://github.com/maduinos/turntable">turntable</a></h3>
+          <p>
+            Arduino stepper turntable experiment. The repository documents hardware requirements,
+            build expectations, and safety notes for small embedded prototypes.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Arduino</span>
+            <span class="tag">Stepper</span>
+            <span class="tag">Prototype</span>
+          </div>
+        </article>
+
+        <article class="repo-card profile">
+          <h3><a href="https://github.com/maduinos/maduinos">maduinos</a></h3>
+          <p>
+            GitHub profile and operations repository. It contains the account README, release and
+            support documents, public repository governance notes, and scripts for checking or
+            pushing the local workspace.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Profile README</span>
+            <span class="tag">Operations</span>
+            <span class="tag">Documentation</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="workflow">
+      <h2>Operating Workflow</h2>
+      <p>
+        Repository work is intentionally split into local checks, focused commits, direct pushes, and
+        public-facing docs. The profile repository is the source of truth for how the workspace should
+        be handled.
+      </p>
+
+      <div class="workflow">
+        <div>
+          <h3>1. Check locally</h3>
+          <p>Run <code>scripts/verify-all.sh</code> from the workspace to test Python projects, HDL simulations, and available Arduino checks.</p>
+        </div>
+        <div>
+          <h3>2. Commit per repo</h3>
+          <p>Because the workspace is not a parent Git repo, commit changes inside the affected child repository.</p>
+        </div>
+        <div>
+          <h3>3. Push directly</h3>
+          <p>Use each repository's <code>origin/main</code>. The helper script can push the standard public project set.</p>
+        </div>
+        <div>
+          <h3>4. Keep scope clear</h3>
+          <p>Lead with FPGA education and hardware bring-up; label non-FPGA repositories as personal lab work.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="documents">
+      <h2>Key Documents</h2>
+      <p>
+        These documents define the public posture, contribution expectations, support boundaries, and
+        local operating commands for the Maduinos repository set.
+      </p>
+      <ul class="doc-list">
+        <li><a href="repository-operations.md">Repository operations</a>: workspace layout, blockers, push order, and local tool setup.</li>
+        <li><a href="../README.md">Profile README</a>: business-first public profile content.</li>
+        <li><a href="../CHANGELOG.md">Changelog</a>: public-facing documentation updates.</li>
+        <li><a href="../SECURITY.md">Security policy</a>: private reporting path for secrets or unsafe behavior.</li>
+        <li><a href="../CONTRIBUTING.md">Contribution guide</a>: scope and local verification expectations.</li>
+        <li><a href="../RELEASE.md">Release process</a>: version and tag expectations for public repositories.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      Maduinos public repository overview. Business: <a href="https://biz.maduinos.com/">biz.maduinos.com</a>.
+    </div>
+  </footer>
+</body>
+</html>
