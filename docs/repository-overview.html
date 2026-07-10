@@ -120,7 +120,7 @@
 
     .summary-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 14px;
       margin-top: 18px;
     }
@@ -265,8 +265,8 @@
         <p class="eyebrow">공개 코드 포트폴리오</p>
         <h1>Maduinos 저장소 소개</h1>
         <p>
-          Maduinos 공개 저장소를 FPGA 교육, C_DUINO_A7 보드 bring-up, 임베디드 예제,
-          개인 실험 프로젝트로 나누어 정리한 안내 문서입니다.
+          Maduinos 저장소를 FPGA 교육, C_DUINO_A7 보드 bring-up, 임베디드 예제,
+          공개·비공개 개인 실험 프로젝트로 나누어 정리한 안내 문서입니다.
         </p>
       </div>
     </div>
@@ -288,8 +288,12 @@
           FPGA 교육과 보드 bring-up을 대표하는 비즈니스용 저장소입니다.
         </div>
         <div class="summary-item">
-          <strong>4</strong>
+          <strong>7</strong>
           공개 상태로 유지하는 개인 실험 저장소입니다.
+        </div>
+        <div class="summary-item">
+          <strong>1</strong>
+          비공개로 관리하는 개인 실험 저장소입니다.
         </div>
         <div class="summary-item">
           <strong>1</strong>
@@ -301,8 +305,8 @@
     <section id="repositories">
       <h2>저장소 목록</h2>
       <p>
-        공개 프로필에서는 FPGA와 보드 레벨 자료를 먼저 보여줍니다. 개인 실험 프로젝트도 참고용으로
-        공개하지만, 고객 대상 산출물과는 분리해서 설명합니다.
+        공개 프로필에서는 FPGA와 보드 레벨 자료를 먼저 보여줍니다. 개인 실험 프로젝트는 고객 대상
+        산출물과 분리하고, 공개 여부를 명확히 표시합니다.
       </p>
 
       <div class="repo-grid">
@@ -346,6 +350,19 @@
         </article>
 
         <article class="repo-card lab">
+          <h3>Codex_pet</h3>
+          <p>
+            Codex CLI custom pet 캐릭터 자산과 설치·검증 도구, 랜덤 선택 런처를 관리하는
+            비공개 개인 실험 저장소입니다.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Codex CLI</span>
+            <span class="tag">Custom pet</span>
+            <span class="tag">비공개</span>
+          </div>
+        </article>
+
+        <article class="repo-card lab">
           <h3><a href="https://github.com/maduinos/macroKey">macroKey</a></h3>
           <p>
             Arduino HID 키패드와 Windows용 Python 매크로 GUI 앱을 함께 관리하는 통합 프로젝트입니다.
@@ -371,11 +388,49 @@
           </div>
         </article>
 
+        <article class="repo-card lab">
+          <h3><a href="https://github.com/maduinos/Burndori">Burndori</a></h3>
+          <p>
+            OCR로 영어 자막을 인식하고 한국어 번역 오버레이를 표시하는 개인 실험입니다.
+            API 키와 로컬 설정은 소스와 분리해서 관리합니다.
+          </p>
+          <div class="tag-row">
+            <span class="tag">OCR</span>
+            <span class="tag">번역</span>
+            <span class="tag">데스크톱 앱</span>
+          </div>
+        </article>
+
+        <article class="repo-card lab">
+          <h3><a href="https://github.com/maduinos/GIFtoRGB565">GIFtoRGB565</a></h3>
+          <p>
+            GIF 프레임을 Arduino에서 사용할 수 있는 RGB565 <code>PROGMEM</code> 헤더로
+            변환하는 GUI 도구입니다.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">RGB565</span>
+            <span class="tag">Arduino</span>
+          </div>
+        </article>
+
+        <article class="repo-card lab">
+          <h3><a href="https://github.com/maduinos/KiCAD_LIB">KiCAD_LIB</a></h3>
+          <p>
+            KiCad 심볼, 풋프린트, 3D 모델을 모아 관리하는 개인 라이브러리 저장소입니다.
+          </p>
+          <div class="tag-row">
+            <span class="tag">KiCad</span>
+            <span class="tag">PCB</span>
+            <span class="tag">라이브러리</span>
+          </div>
+        </article>
+
         <article class="repo-card profile">
           <h3><a href="https://github.com/maduinos/maduinos">maduinos</a></h3>
           <p>
             GitHub 프로필과 운영 문서를 관리하는 저장소입니다. 계정 README, 릴리스/지원 문서,
-            공개 저장소 운영 기준을 포함합니다.
+            공개·비공개 저장소 운영 기준을 포함합니다.
           </p>
           <div class="tag-row">
             <span class="tag">Profile README</span>
@@ -416,7 +471,7 @@
     <section id="documents">
       <h2>주요 문서</h2>
       <p>
-        아래 문서들은 공개 저장소의 방향, 기여 기준, 지원 범위, 로컬 운영 기준을 정리합니다.
+        아래 문서들은 저장소의 방향, 기여 기준, 지원 범위, 로컬 운영 기준을 정리합니다.
       </p>
       <ul class="doc-list">
         <li><a href="repository-operations.md">저장소 운영 문서</a>: 작업 폴더 구조, 차단 요인, 푸시 순서, 로컬 도구 설정.</li>
@@ -431,7 +486,7 @@
 
   <footer>
     <div class="footer-inner">
-      Maduinos 공개 저장소 소개. 비즈니스: <a href="https://biz.maduinos.com/">biz.maduinos.com</a>.
+      Maduinos 저장소 소개. 비즈니스: <a href="https://biz.maduinos.com/">biz.maduinos.com</a>.
     </div>
   </footer>
 </body>

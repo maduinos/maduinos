@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-07-10
+
+- Added the private `Codex_pet` repository to the profile inventory, operations guide, HTML overview, and helper scripts.
+- Synchronized the HTML overview and helper scripts with the existing hobby repository inventory.
+
 ## 2026-05-30
 
 - Updated the public profile to treat `macroKey` as the unified Arduino and Python macro project.
