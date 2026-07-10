@@ -7,8 +7,13 @@ repos=(
   c_duino_a7
   AutoTrading
   SlimePet
+  Codex_pet
   macroKey
   turntable
+  Burndori
+  GIFtoRGB565
+  KiCAD_LIB
+  maduinos
 )
 
 for repo in "${repos[@]}"; do
