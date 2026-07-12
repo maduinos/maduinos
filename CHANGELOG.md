@@ -1,8 +1,14 @@
 # Changelog
 
+## 2026-07-12
+
+- Synchronized the repository inventory with the current remote: the profile now lists public repositories only (README, operations guide, HTML overview, helper scripts).
+- Added `AutoTrading` to the public profile inventory.
+- Updated workspace path references to the current local layout.
+
 ## 2026-07-10
 
-- Added the private `Codex_pet` repository to the profile inventory, operations guide, HTML overview, and helper scripts.
+- Added a private experiment repository to the profile inventory, operations guide, HTML overview, and helper scripts.
 - Synchronized the HTML overview and helper scripts with the existing hobby repository inventory.
 
 ## 2026-05-30
