@@ -10,5 +10,5 @@ Use issues for:
 
 Use the business page for FPGA education, consulting, or customer-specific work:
 
-<https://biz.maduinos.com/>
+<https://maduinos.com/>
 

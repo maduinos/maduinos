@@ -2,6 +2,7 @@
 
 ## 2026-07-12
 
+- Updated all business website references to `maduinos.com`.
 - Synchronized the repository inventory with the current remote: the profile now lists public repositories only (README, operations guide, HTML overview, helper scripts).
 - Added `AutoTrading` to the public profile inventory.
 - Updated workspace path references to the current local layout.
