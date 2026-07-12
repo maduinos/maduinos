@@ -6,7 +6,7 @@ This repository should only contain public profile, repository operations, and h
 
 If you find private data exposure, contact Maduinos through:
 
-<https://biz.maduinos.com/>
+<https://maduinos.com/>
 
 Do not open a public issue for private data exposure.
 
