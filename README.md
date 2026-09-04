@@ -1,3 +1,7 @@
+> 만든 사람: maduinos<br>
+> 문서 만든 날짜: 2026-05-30<br>
+> https://maduinos.blogspot.com/
+
 # Maduinos
 
 FPGA 교육, 보드 bring-up, 임베디드 하드웨어 실습 예제를 정리하는 공개 저장소입니다.

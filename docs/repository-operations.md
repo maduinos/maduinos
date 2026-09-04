@@ -1,3 +1,7 @@
+> 만든 사람: maduinos<br>
+> 문서 만든 날짜: 2026-05-30<br>
+> https://maduinos.blogspot.com/
+
 # Maduinos 저장소 운영 문서
 
 ## 기본 방향
