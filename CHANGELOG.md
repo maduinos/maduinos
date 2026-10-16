@@ -4,6 +4,13 @@
 
 # Changelog
 
+## 2026-10-16
+
+- Added AMD FPGA MCP and AgentPet public distribution repositories to the profile.
+- Synchronized the README, HTML overview and operations guide with the 13 public repositories confirmed on GitHub.
+- Documented ArenaTalk as discontinued with MIT source available.
+- Replaced obsolete workspace paths and blanket push instructions with repository-specific guidance.
+
 ## 2026-07-12
 
 - Updated all business website references to `maduinos.com`.

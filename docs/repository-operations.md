@@ -6,122 +6,80 @@
 
 ## 기본 방향
 
-GitHub 공개 프로필은 FPGA와 C_DUINO_A7 보드 자료가 먼저 보이도록 운영합니다.
+GitHub 프로필에서는 FPGA·임베디드 자료와 개발 도구를 먼저 소개하고, 데스크톱 앱과 개인 실험 프로젝트의 목적과 공개 범위를 함께 설명합니다.
 
-- FPGA, C_DUINO_A7, 보드 bring-up, 교육 자료를 핵심 공개 자료로 둡니다.
-- 개인 실험 저장소는 공개 여부를 명확히 표시하고 취미/실험 프로젝트로 구분합니다.
-- 자동매매, 데스크톱 장난감 앱, 매크로 도구는 비즈니스 코드처럼 보이지 않게 구분합니다.
+- AMD FPGA MCP와 C_DUINO_A7을 FPGA 분야의 대표 프로젝트로 소개합니다.
+- AgentPet은 Linux 데스크톱 앱으로 소개하며 공개 배포 저장소로 연결합니다.
+- 개인 실험은 비즈니스 산출물과 구분하고, 개발 중단 여부는 해당 저장소의 안내를 따릅니다.
+- 프로필에는 GitHub에서 공개 상태가 확인된 저장소만 연결합니다. 공개 배포 저장소가 있다고 개발 소스까지 공개된 것으로 설명하지 않습니다.
 
 ## 작업 폴더 구조
 
-`/home/maduinos/00_GitHub/maduinos` 폴더에는 여러 개의 독립 Git 저장소가 들어 있습니다. 상위 폴더 하나를 한 번에 커밋하는 구조가 아니므로, 변경 사항은 각 하위 저장소 안에서 따로 확인하고 커밋합니다.
+작업 폴더 아래에 여러 독립 Git 저장소가 있습니다. `maduinos/maduinos`는 GitHub 프로필 README와 공개 저장소 운영 문서를 관리하는 저장소입니다. 변경 사항은 대상 저장소 안에서 확인하며, 작업 폴더 전체를 하나의 저장소처럼 커밋하지 않습니다.
 
-## 저장소 구분
+절대 경로는 환경마다 다르므로 아래 예시는 프로필 저장소 루트에서 실행합니다.
 
-이 문서와 헬퍼 스크립트는 공개 저장소만 다룹니다.
+## 공개 저장소 목록
+
+2026-10-16 GitHub 공개 목록 기준입니다. 로컬 폴더가 있다는 이유만으로 공개 목록에 추가하지 않습니다.
 
 | 저장소 | 구분 | 운영 기준 |
 | --- | --- | --- |
-| `c_duino_a7` | 비즈니스 공개 FPGA 자료 | 보드 설명, 예제 구조, bring-up 문서를 우선 관리 |
+| `amd-fpga-mcp-releases` | FPGA 개발 도구 배포 | 설치 가이드, 지원 환경, 배포 패키지와 체크섬 안내 |
+| `c_duino_a7` | FPGA 교육·보드 자료 | 보드 설명, HDL 예제, bring-up 문서 관리 |
+| `agentpet-releases` | 데스크톱 앱 배포 | Ubuntu 설치 방법, .deb 다운로드와 캐릭터 번들 조건 안내 |
+| `macroKey` | 개인 실험 | Arduino HID 동작과 Windows GUI 사용법 안내 |
+| `GIFtoRGB565` | 개인 실험 | RGB565 변환과 GUI 사용법 안내 |
+| `turntable` | 개인 실험 | 하드웨어 요구사항과 실습 방법 안내 |
+| `KiCAD_LIB` | 개인 라이브러리 | 심볼, 풋프린트, 3D 모델 관리 |
+| `SlimePet` | 개인 실험 | 데스크톱 펫 앱 실행 방법 안내 |
+| `ArenaTalk` | 개발 중단·소스 공개 | 배포판 제공 중단과 MIT 소스 공개 상태 명시 |
 | `AutoTrading` | 개인 실험 | 실제 키를 넣지 않고 실거래 추천 코드처럼 보이지 않게 관리 |
-| `SlimePet` | 개인 실험 | 실행 방법과 버전 기록을 간단히 유지 |
-| `macroKey` | 개인 실험 | Arduino HID 동작, Python GUI 앱, 안전 주의사항을 명확히 기록 |
-| `turntable` | 개인 실험 | 하드웨어 요구사항과 안전 주의사항을 명확히 기록 |
-| `GIFtoRGB565` | 개인 실험 | 변환 로직 테스트와 GUI 실행 방법을 함께 유지 |
-| `KiCAD_LIB` | 개인 실험 | KiCad 라이브러리 자산을 공개 자료로 관리 |
-| `maduinos` | 프로필/운영 문서 | GitHub 프로필 README와 전체 저장소 운영 기준 관리 |
+| `maduinos-biz-web` | 비즈니스 웹사이트 | maduinos.com 사이트 관리 |
+| `maduinos-biz-redirect` | 주소 연결 | 기존 비즈니스 주소의 리디렉션 관리 |
+| `maduinos` | 프로필·운영 문서 | README, HTML 소개, 공개 저장소 목록과 운영 기준 관리 |
+
+## 소개 문서 갱신
+
+- GitHub 공개 상태와 각 저장소의 README를 확인합니다.
+- 프로필 README, HTML 소개와 이 문서의 목록을 함께 맞춥니다.
+- 공개적으로 의미 있는 변경은 `CHANGELOG.md`에 기록합니다.
+- 다운로드는 고정 버전 파일명보다 각 저장소의 `releases/latest` 링크를 사용합니다.
+- 메타데이터의 최초 작성일은 보존하고, 목록 확인 날짜를 별도로 기록합니다.
+- 비공개 소스, 고객 자료, 자격 증명과 로컬 로그는 소개 문서에 넣지 않습니다.
 
 ## 공개 및 배포 전 확인 기준
 
-- README에 목적, 요구사항, 사용법, 라이선스가 정리되어 있는지 확인합니다.
-- `CHANGELOG.md`에는 공개적으로 의미 있는 변경 사항만 남깁니다.
-- `SUPPORT.md`에는 공개 이슈로 다룰 내용과 비공개 연락이 필요한 내용을 구분합니다.
-- `RELEASE.md`에는 릴리스와 태그 기준을 적습니다.
-- `CONTRIBUTING.md`에는 허용되는 변경 범위와 로컬 확인 절차를 적습니다.
-- `SECURITY.md`에는 비밀키, 개인 데이터, 안전 문제가 생겼을 때의 비공개 신고 경로를 둡니다.
-- 공개 위험이 있는 API 키, 로컬 경로, 개인 로그는 추적하지 않습니다.
-- 외부 캐릭터와 이미지 자산은 공개 배포나 상업적 사용 전에 권리와 출처를 확인합니다.
-- 버전 기록이 있는 저장소는 코드와 문서의 버전 표기를 맞춥니다.
-- GitHub 프로필 README는 `c_duino_a7`을 대표 저장소로 보여줍니다.
+- README에 목적, 요구사항, 사용법과 라이선스가 정리되어 있는지 확인합니다.
+- 버전과 지원 환경은 해당 저장소의 문서·릴리스와 일치시킵니다.
+- `SUPPORT.md`, `RELEASE.md`, `CONTRIBUTING.md`, `SECURITY.md`의 적용 범위를 확인합니다.
+- 캐릭터와 이미지 자산은 배포 조건과 출처를 확인합니다.
+- 문서 수정, 커밋, 푸시와 릴리스는 별도 작업으로 취급하며, 커밋과 외부 게시는 사용자가 요청한 범위에서 수행합니다.
 
 ## 보안 이력
 
 과거에 비밀키처럼 보이는 파일이 추적된 저장소는 이력과 대응 방식을 문서화합니다. `AutoTrading/docs/security-history.md`는 `ext_key` 파일 이력과 실제 자격 증명이 노출됐을 때의 회전 원칙을 기록합니다.
 
-## 현재 외부 상태
-
-- 표준 작업 폴더의 GitHub 저장소가 생성되어 있습니다.
-- 각 저장소는 `origin/main`으로 직접 푸시합니다.
-- GitHub CLI 인증 상태가 흔들릴 수 있으므로 일반 푸시는 Git 원격 상태를 기준으로 확인합니다.
-- Arduino 관련 빌드는 로컬 host 환경의 도구 설치 상태에 따라 달라질 수 있습니다.
-
-## 프로필 저장소 설정
-
-프로필 저장소는 이미 생성되어 푸시되어 있습니다. 새 환경에서 다시 구성해야 할 때는 다음 명령을 사용합니다.
+## 로컬 헬퍼 스크립트
 
 ```bash
-cd /home/maduinos/00_GitHub/maduinos/maduinos
-gh repo create maduinos/maduinos --public --description "Maduinos GitHub profile" --source=. --remote=origin --push
+./scripts/status-all.sh
 ```
 
-GitHub 저장소가 이미 있고 로컬 원격만 빠진 경우:
+`status-all.sh`와 `push-all.sh`는 스크립트의 `repos` 배열에 지정된 기존 저장소만 다룹니다. 위 공개 목록 전체를 자동으로 탐색하거나 동기화하지 않습니다. 다른 작업 폴더를 사용하면 `WORKSPACE_ROOT`로 위치를 지정합니다.
+
+`push-all.sh`는 배열의 여러 저장소에 실제 푸시를 수행합니다. 사용자가 해당 저장소들의 푸시를 요청한 경우에만 실행하고, 먼저 각 저장소의 변경 사항·원격·브랜치를 확인합니다. 기본 브랜치 이름은 저장소별 설정을 확인합니다.
+
+## 하드웨어 실습 도구
+
+C_DUINO_A7과 Arduino 실습을 위한 도구 설치 보조 스크립트입니다. AMD FPGA MCP나 AgentPet 설치 프로그램은 아니며, 두 도구의 설치는 각 공개 배포 README를 따릅니다.
+
+- `iverilog`: Verilog 문법 확인
+- `arduino-cli`, Arduino AVR core: Arduino 스케치 빌드
+- `MsTimer2`: turntable 실습용 Arduino 라이브러리
+
+필요한 호스트에 설치할 때 사용합니다. 시스템 패키지 설치와 네트워크 접근이 포함됩니다.
 
 ```bash
-cd /home/maduinos/00_GitHub/maduinos/maduinos
-git remote add origin https://github.com/maduinos/maduinos.git
-git push -u origin main
-```
-
-## 푸시 순서
-
-비즈니스 공개 자료를 먼저 푸시한 뒤 개인 실험 저장소를 푸시합니다.
-
-```bash
-git -C /home/maduinos/00_GitHub/maduinos/c_duino_a7 push origin main
-git -C /home/maduinos/00_GitHub/maduinos/AutoTrading push origin main
-git -C /home/maduinos/00_GitHub/maduinos/SlimePet push origin main
-git -C /home/maduinos/00_GitHub/maduinos/macroKey push origin main
-git -C /home/maduinos/00_GitHub/maduinos/turntable push origin main
-git -C /home/maduinos/00_GitHub/maduinos/GIFtoRGB565 push origin main
-git -C /home/maduinos/00_GitHub/maduinos/KiCAD_LIB push origin main
-git -C /home/maduinos/00_GitHub/maduinos/maduinos push origin main
-```
-
-## 로컬 도구
-
-하드웨어/임베디드 저장소를 점검하려면 host 환경에 필요한 도구를 설치합니다.
-
-- `iverilog`: Verilog 소스 문법 확인
-- `arduino-cli`: Arduino 스케치 컴파일
-- Arduino AVR core
-- `MsTimer2`: `turntable` 빌드에 필요한 Arduino 라이브러리
-
-설치 예:
-
-```bash
-cd /home/maduinos/00_GitHub/maduinos/maduinos
 ./scripts/install-tools.sh
 ```
-
-수동 설치 예:
-
-```bash
-sudo apt-get update
-sudo apt-get install -y iverilog curl ca-certificates
-curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
-sudo install -m 0755 bin/arduino-cli /usr/local/bin/arduino-cli
-rm -rf bin
-arduino-cli core update-index
-arduino-cli core install arduino:avr
-arduino-cli lib install MsTimer2
-```
-
-## 현재 작업 환경에서 확인된 제한
-
-Codex sandbox에서는 host 시스템 도구 설치와 일부 네트워크 작업이 제한될 수 있습니다.
-
-- root 권한이 필요한 패키지 설치는 실패할 수 있습니다.
-- snap 기반 `arduino-cli`는 sandbox에서 런타임 폴더를 만들지 못할 수 있습니다.
-- 외부 네트워크가 필요한 GitHub 작업은 승인된 실행 환경에서 처리해야 합니다.
-
-이 제한은 저장소 내용 문제가 아니라 실행 환경의 제약입니다.

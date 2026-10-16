@@ -270,8 +270,8 @@
         <p class="eyebrow">공개 코드 포트폴리오</p>
         <h1>Maduinos 저장소 소개</h1>
         <p>
-          Maduinos 저장소를 FPGA 교육, C_DUINO_A7 보드 bring-up, 임베디드 예제,
-          공개 개인 실험 프로젝트로 나누어 정리한 안내 문서입니다.
+          FPGA·임베디드 하드웨어, AMD FPGA MCP 개발 도구, AgentPet 데스크톱 앱과
+          공개 개인 실험 프로젝트를 정리한 안내 문서입니다.
         </p>
       </div>
     </div>
@@ -281,137 +281,100 @@
     <section id="portfolio-map">
       <h2>저장소 구성</h2>
       <p>
-        <code>/home/maduinos/00_GitHub/maduinos</code> 작업 폴더는 여러 개의 독립 Git 저장소를
-        담고 있습니다. 상위 폴더 하나가 전체 Git 저장소인 구조가 아니며, 각 하위 디렉터리에서
-        개별적으로 커밋하고 푸시합니다. <code>maduinos</code> 디렉터리는 GitHub 프로필 README와
-        저장소 운영 문서를 관리하는 용도입니다.
+        FPGA 교육과 보드 bring-up, 개발 도구와 데스크톱 앱을 소개합니다.
+        각 프로젝트는 독립 Git 저장소로 관리하며, 공개 배포 저장소는 설치 안내와 다운로드를 제공합니다.
+        목록은 2026-10-16 GitHub 공개 상태를 기준으로 확인했습니다.
       </p>
-
       <div class="summary-grid" aria-label="저장소 요약">
-        <div class="summary-item">
-          <strong>1</strong>
-          FPGA 교육과 보드 bring-up을 대표하는 비즈니스용 저장소입니다.
-        </div>
-        <div class="summary-item">
-          <strong>6</strong>
-          공개 상태로 유지하는 개인 실험 저장소입니다.
-        </div>
-        <div class="summary-item">
-          <strong>1</strong>
-          GitHub 프로필과 전체 운영 문서를 관리하는 저장소입니다.
-        </div>
+        <div class="summary-item"><strong>3</strong>대표 프로젝트: FPGA 자료·개발 도구·데스크톱 앱</div>
+        <div class="summary-item"><strong>7</strong>개인 실험·라이브러리·개발 중단 프로젝트</div>
+        <div class="summary-item"><strong>3</strong>웹사이트·리디렉션·프로필 문서</div>
       </div>
     </section>
 
     <section id="repositories">
-      <h2>저장소 목록</h2>
-      <p>
-        공개 프로필에서는 FPGA와 보드 레벨 자료를 먼저 보여줍니다. 개인 실험 프로젝트는 고객 대상
-        산출물과 분리하고, 공개 여부를 명확히 표시합니다.
-      </p>
-
+      <h2>대표 프로젝트</h2>
+      <p>AMD FPGA MCP는 독립 커뮤니티 프로젝트이며 AMD 공식 제품이 아닙니다. AMD 도구와 라이선스는 별도입니다.
+        AgentPet은 Ubuntu Desktop용으로 배포합니다. 지원 환경과 설치 절차는 각 저장소의 README를 확인하세요.</p>
       <div class="repo-grid">
         <article class="repo-card business">
-          <h3><a href="https://github.com/maduinos/c_duino_a7">c_duino_a7</a></h3>
-          <p>
-            C_DUINO_A7 보드를 위한 공개 FPGA 데모 소스와 문서입니다. HDL 예제,
-            보드 bring-up, 학습자가 읽을 수 있는 교육 자료를 모아둔 대표 저장소입니다.
-          </p>
-          <div class="tag-row">
-            <span class="tag">FPGA</span>
-            <span class="tag">Verilog</span>
-            <span class="tag">보드 bring-up</span>
-          </div>
+          <h3><a href="https://github.com/maduinos/amd-fpga-mcp-releases">AMD FPGA MCP</a></h3>
+          <p>MCP 클라이언트에서 Vivado·Vitis 개발 흐름, 빌드와 timing·CDC·DRC 보고서 검토를 연결하는 도구의 설치 가이드와 배포 패키지.</p>
+          <div class="tag-row"><span class="tag">FPGA · MCP</span></div>
+          <p><a href="https://github.com/maduinos/amd-fpga-mcp-releases/releases/latest">최신 배포 다운로드</a></p>
         </article>
-
-        <article class="repo-card risk">
-          <h3><a href="https://github.com/maduinos/AutoTrading">AutoTrading</a></h3>
-          <p>
-            암호화폐 자동화 개인 실험 저장소입니다. 비밀키 관리 문서를 포함하지만,
-            비즈니스 포트폴리오나 실거래 추천 코드로 제시하지 않습니다.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Python</span>
-            <span class="tag">개인 실험</span>
-            <span class="tag">비밀키 관리</span>
-          </div>
+        <article class="repo-card business">
+          <h3><a href="https://github.com/maduinos/c_duino_a7">C_DUINO_A7</a></h3>
+          <p>C_DUINO_A7 보드를 위한 공개 FPGA 데모 소스와 문서.</p>
+          <div class="tag-row"><span class="tag">FPGA · 보드 bring-up</span></div>
         </article>
-
-        <article class="repo-card lab">
-          <h3><a href="https://github.com/maduinos/SlimePet">SlimePet</a></h3>
-          <p>
-            데스크톱 장난감 앱 실험입니다. 실행 문서와 버전 기록을 유지하며
-            FPGA 비즈니스 중심 자료와 구분합니다.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Python</span>
-            <span class="tag">데스크톱 앱</span>
-            <span class="tag">개인 실험</span>
-          </div>
+        <article class="repo-card business">
+          <h3><a href="https://github.com/maduinos/agentpet-releases">AgentPet</a></h3>
+          <p>Codex·Claude Code·Cursor의 에이전트 활동을 바탕화면 캐릭터로 보여 주는 Linux 앱의 설치 안내와 .deb 배포.</p>
+          <div class="tag-row"><span class="tag">Linux · 데스크톱 앱</span></div>
+          <p><a href="https://github.com/maduinos/agentpet-releases/releases/latest">최신 배포 다운로드</a></p>
         </article>
+      </div>
+    </section>
 
+    <section id="experiments">
+      <h2>개인 실험 저장소</h2>
+      <div class="repo-grid">
         <article class="repo-card lab">
           <h3><a href="https://github.com/maduinos/macroKey">macroKey</a></h3>
-          <p>
-            Arduino HID 키패드와 Windows용 Python 매크로 GUI 앱을 함께 관리하는 통합 프로젝트입니다.
-            원하는 키 조합에 원하는 매크로 이미지를 바인딩할 수 있습니다.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Arduino</span>
-            <span class="tag">HID</span>
-            <span class="tag">매크로 키패드</span>
-          </div>
+          <p>Arduino HID 키패드와 Windows용 Python 매크로 GUI 앱.</p>
+          <div class="tag-row"><span class="tag">Arduino · HID</span></div>
         </article>
-
-        <article class="repo-card lab">
-          <h3><a href="https://github.com/maduinos/turntable">turntable</a></h3>
-          <p>
-            Arduino 스테퍼 모터 턴테이블 실험입니다. 작은 임베디드 프로토타입에 필요한 하드웨어
-            요구사항, 빌드 조건, 안전 주의사항을 문서화합니다.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Arduino</span>
-            <span class="tag">스테퍼 모터</span>
-            <span class="tag">프로토타입</span>
-          </div>
-        </article>
-
         <article class="repo-card lab">
           <h3><a href="https://github.com/maduinos/GIFtoRGB565">GIFtoRGB565</a></h3>
-          <p>
-            GIF 프레임을 Arduino에서 사용할 수 있는 RGB565 <code>PROGMEM</code> 헤더로
-            변환하는 GUI 도구입니다.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Python</span>
-            <span class="tag">RGB565</span>
-            <span class="tag">Arduino</span>
-          </div>
+          <p>GIF 프레임을 Arduino용 RGB565 PROGMEM 헤더로 변환하는 GUI 도구.</p>
+          <div class="tag-row"><span class="tag">Python · RGB565</span></div>
         </article>
-
+        <article class="repo-card lab">
+          <h3><a href="https://github.com/maduinos/turntable">turntable</a></h3>
+          <p>Arduino 스테퍼 모터 턴테이블 실험.</p>
+          <div class="tag-row"><span class="tag">Arduino · 스테퍼 모터</span></div>
+        </article>
         <article class="repo-card lab">
           <h3><a href="https://github.com/maduinos/KiCAD_LIB">KiCAD_LIB</a></h3>
-          <p>
-            KiCad 심볼, 풋프린트, 3D 모델을 모아 관리하는 개인 라이브러리 저장소입니다.
-          </p>
-          <div class="tag-row">
-            <span class="tag">KiCad</span>
-            <span class="tag">PCB</span>
-            <span class="tag">라이브러리</span>
-          </div>
+          <p>심볼, 풋프린트, 3D 모델을 모아둔 개인 KiCad 라이브러리.</p>
+          <div class="tag-row"><span class="tag">하드웨어 · 라이브러리</span></div>
         </article>
+        <article class="repo-card lab">
+          <h3><a href="https://github.com/maduinos/SlimePet">SlimePet</a></h3>
+          <p>PyQt6 기반 데스크톱 슬라임 펫 앱.</p>
+          <div class="tag-row"><span class="tag">Python · 데스크톱 앱</span></div>
+        </article>
+        <article class="repo-card lab">
+          <h3><a href="https://github.com/maduinos/ArenaTalk">ArenaTalk</a></h3>
+          <p>캐릭터 토론과 Elo 순위를 구현한 데스크톱 앱. 개발 중단, MIT 소스 공개.</p>
+          <div class="tag-row"><span class="tag">개발 중단 · MIT</span></div>
+        </article>
+        <article class="repo-card lab">
+          <h3><a href="https://github.com/maduinos/AutoTrading">AutoTrading</a></h3>
+          <p>개인 암호화폐 트레이딩 리서치 스크립트 (실거래 추천 아님).</p>
+          <div class="tag-row"><span class="tag">Python · 개인 실험</span></div>
+        </article>
+      </div>
+    </section>
 
+    <section id="websites">
+      <h2>웹사이트와 프로필</h2>
+      <div class="repo-grid">
+        <article class="repo-card profile">
+          <h3><a href="https://github.com/maduinos/maduinos-biz-web">maduinos-biz-web</a></h3>
+          <p>maduinos.com 비즈니스 웹사이트.</p>
+          <div class="tag-row"><span class="tag">웹사이트</span></div>
+        </article>
+        <article class="repo-card profile">
+          <h3><a href="https://github.com/maduinos/maduinos-biz-redirect">maduinos-biz-redirect</a></h3>
+          <p>기존 biz.maduinos.com 주소를 maduinos.com으로 연결.</p>
+          <div class="tag-row"><span class="tag">리디렉션</span></div>
+        </article>
         <article class="repo-card profile">
           <h3><a href="https://github.com/maduinos/maduinos">maduinos</a></h3>
-          <p>
-            GitHub 프로필과 운영 문서를 관리하는 저장소입니다. 계정 README, 릴리스/지원 문서,
-            공개 저장소 운영 기준을 포함합니다.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Profile README</span>
-            <span class="tag">운영</span>
-            <span class="tag">문서</span>
-          </div>
+          <p>GitHub 프로필 README와 공개 저장소 소개·운영 문서.</p>
+          <div class="tag-row"><span class="tag">프로필 · 문서</span></div>
         </article>
       </div>
     </section>
@@ -419,7 +382,7 @@
     <section id="workflow">
       <h2>운영 흐름</h2>
       <p>
-        저장소 작업은 로컬 점검, 저장소별 커밋, 직접 푸시, 공개 문서 관리로 나누어 처리합니다.
+        저장소 작업은 로컬 점검, 요청된 커밋·푸시, 공개 문서 관리로 나누어 처리합니다.
         이 프로필 저장소는 전체 작업 폴더를 어떻게 다룰지 기록하는 기준 문서 역할을 합니다.
       </p>
 
@@ -430,15 +393,15 @@
         </div>
         <div>
           <h3>2. 저장소별 커밋</h3>
-          <p>상위 작업 폴더는 Git 저장소가 아니므로 변경된 하위 저장소 안에서 각각 커밋합니다.</p>
+          <p>커밋 요청이 있으면 변경된 하위 저장소에서 변경 내용과 작성자 설정을 확인하고 커밋합니다.</p>
         </div>
         <div>
-          <h3>3. 직접 푸시</h3>
-          <p>각 저장소의 <code>origin/main</code>으로 푸시합니다. 여러 저장소를 다룰 때도 저장소별 상태를 먼저 확인합니다.</p>
+          <h3>3. 요청된 푸시</h3>
+          <p>사용자가 푸시를 요청하면 대상 저장소의 원격과 브랜치를 확인한 뒤 진행합니다.</p>
         </div>
         <div>
           <h3>4. 범위 구분</h3>
-          <p>FPGA 교육과 하드웨어 bring-up을 먼저 보여주고, 비-FPGA 저장소는 개인 실험으로 표시합니다.</p>
+          <p>대표 프로젝트, 개인 실험, 웹사이트를 구분하고 공개 배포와 소스 공개 범위를 정확히 안내합니다.</p>
         </div>
       </div>
     </section>
@@ -449,7 +412,7 @@
         아래 문서들은 저장소의 방향, 기여 기준, 지원 범위, 로컬 운영 기준을 정리합니다.
       </p>
       <ul class="doc-list">
-        <li><a href="repository-operations.md">저장소 운영 문서</a>: 작업 폴더 구조, 차단 요인, 푸시 순서, 로컬 도구 설정.</li>
+        <li><a href="repository-operations.md">저장소 운영 문서</a>: 공개 저장소 목록, 문서 갱신 기준, 헬퍼 스크립트와 로컬 도구.</li>
         <li><a href="../README.md">프로필 README</a>: GitHub 프로필에 표시되는 공개 소개 문서.</li>
         <li><a href="../CHANGELOG.md">변경 이력</a>: 공개 문서와 운영 기준 변경 사항.</li>
         <li><a href="../SECURITY.md">보안 정책</a>: 비밀키나 안전 문제를 비공개로 신고하는 경로.</li>
